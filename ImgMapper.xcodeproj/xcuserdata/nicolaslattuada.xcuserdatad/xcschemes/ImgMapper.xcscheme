@@ -57,6 +57,16 @@
             ReferencedContainer = "container:ImgMapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-file /Users/nicolaslattuada/Workspace/poker/shot1.png"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-map /Users/nicolaslattuada/Workspace/ImgMapper/Ressources/imageMap.html"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

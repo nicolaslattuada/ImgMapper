@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D6BDC3F186B208B003C9A1D /* liblept.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6BDC3E186B208B003C9A1D /* liblept.dylib */; };
 		4DBD5F6F1869BD1200198EEC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD5F6E1869BD1200198EEC /* main.cpp */; };
 		4DBD5F711869BD1200198EEC /* ImgMapper.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DBD5F701869BD1200198EEC /* ImgMapper.1 */; };
+		4DBD5F7A1869C04800198EEC /* libexpat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBD5F791869C04800198EEC /* libexpat.dylib */; };
+		4DBD5F821869D56E00198EEC /* libtesseract.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBD5F811869D56E00198EEC /* libtesseract.dylib */; };
+		4DBD5F841869D67B00198EEC /* libopencv_imgproc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBD5F831869D67B00198EEC /* libopencv_imgproc.dylib */; };
+		4DBD5F861869E90F00198EEC /* libopencv_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBD5F851869E90F00198EEC /* libopencv_core.dylib */; };
+		4DBD5F881869E97100198EEC /* libopencv_highgui.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBD5F871869E97100198EEC /* libopencv_highgui.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +31,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D6BDC3E186B208B003C9A1D /* liblept.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liblept.dylib; path = ../../../../usr/local/Cellar/leptonica/1.69/lib/liblept.dylib; sourceTree = "<group>"; };
 		4DBD5F6B1869BD1200198EEC /* ImgMapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ImgMapper; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBD5F6E1869BD1200198EEC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4DBD5F701869BD1200198EEC /* ImgMapper.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ImgMapper.1; sourceTree = "<group>"; };
+		4DBD5F791869C04800198EEC /* libexpat.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexpat.dylib; path = ../../../../usr/local/Cellar/expat/2.1.0/lib/libexpat.dylib; sourceTree = "<group>"; };
+		4DBD5F811869D56E00198EEC /* libtesseract.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtesseract.dylib; path = ../../../../usr/local/Cellar/tesseract/3.02.02/lib/libtesseract.dylib; sourceTree = "<group>"; };
+		4DBD5F831869D67B00198EEC /* libopencv_imgproc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.dylib; path = ../../../../usr/local/Cellar/opencv/2.4.6.1/lib/libopencv_imgproc.dylib; sourceTree = "<group>"; };
+		4DBD5F851869E90F00198EEC /* libopencv_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.dylib; path = ../../../../usr/local/Cellar/opencv/2.4.6.1/lib/libopencv_core.dylib; sourceTree = "<group>"; };
+		4DBD5F871869E97100198EEC /* libopencv_highgui.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.dylib; path = ../../../../usr/local/Cellar/opencv/2.4.6.1/lib/libopencv_highgui.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DBD5F7A1869C04800198EEC /* libexpat.dylib in Frameworks */,
+				4DBD5F821869D56E00198EEC /* libtesseract.dylib in Frameworks */,
+				4D6BDC3F186B208B003C9A1D /* liblept.dylib in Frameworks */,
+				4DBD5F841869D67B00198EEC /* libopencv_imgproc.dylib in Frameworks */,
+				4DBD5F881869E97100198EEC /* libopencv_highgui.dylib in Frameworks */,
+				4DBD5F861869E90F00198EEC /* libopencv_core.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +62,12 @@
 		4DBD5F621869BD1200198EEC = {
 			isa = PBXGroup;
 			children = (
+				4D6BDC3E186B208B003C9A1D /* liblept.dylib */,
+				4DBD5F871869E97100198EEC /* libopencv_highgui.dylib */,
+				4DBD5F851869E90F00198EEC /* libopencv_core.dylib */,
+				4DBD5F831869D67B00198EEC /* libopencv_imgproc.dylib */,
+				4DBD5F811869D56E00198EEC /* libtesseract.dylib */,
+				4DBD5F791869C04800198EEC /* libexpat.dylib */,
 				4DBD5F6D1869BD1200198EEC /* ImgMapper */,
 				4DBD5F6C1869BD1200198EEC /* Products */,
 			);
@@ -155,6 +179,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/expat/2.1.0/include,
+					/usr/local/Cellar/tesseract/3.02.02/include,
+					/usr/local/Cellar/opencv/2.4.6.1/include,
+					/usr/local/Cellar/leptonica/1.69/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -187,6 +219,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/expat/2.1.0/include,
+					/usr/local/Cellar/tesseract/3.02.02/include,
+					/usr/local/Cellar/opencv/2.4.6.1/include,
+					/usr/local/Cellar/leptonica/1.69/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
@@ -195,6 +235,13 @@
 		4DBD5F751869BD1200198EEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/expat/2.1.0/lib,
+					/usr/local/Cellar/tesseract/3.02.02/lib,
+					/usr/local/Cellar/opencv/2.4.6.1/lib,
+					/usr/local/Cellar/leptonica/1.69/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -202,6 +249,13 @@
 		4DBD5F761869BD1200198EEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/expat/2.1.0/lib,
+					/usr/local/Cellar/tesseract/3.02.02/lib,
+					/usr/local/Cellar/opencv/2.4.6.1/lib,
+					/usr/local/Cellar/leptonica/1.69/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -225,6 +279,7 @@
 				4DBD5F761869BD1200198EEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
