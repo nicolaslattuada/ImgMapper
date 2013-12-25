@@ -59,11 +59,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-file /Users/nicolaslattuada/Workspace/poker/shot1.png"
+            argument = "-file /Users/nicolaslattuada/Workspace/ImgMapper/Ressources/shot1.png"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-map /Users/nicolaslattuada/Workspace/ImgMapper/Ressources/imageMap.html"
+            argument = "-map /Users/nicolaslattuada/Workspace/ImgMapper/Ressources/poker.map"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

@@ -3,15 +3,15 @@
 #include <vector>
 #include <iostream>
 
-#include "opencv2/core/core.hpp"
-#include "opencv2/imgproc/imgproc.hpp"
-#include "opencv2/highgui/highgui.hpp"
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
 #include <tesseract/baseapi.h>
 #include <leptonica/allheaders.h>
 
 #define BUFFER_SIZE 100000
-#define CV_MATCH_METHOD 1
+#define CV_MATCH_METHOD 3
 #define CV_MATCH_MIN_RESULT_SIZE 200
 
 /* track the current level in the xml tree */
@@ -52,7 +52,7 @@ AreaElement *createAreaElement(const char **attribute) {
 
             eltsInitialized++;
         }
-        if (attrName=="href") {
+        if (attrName=="href" || attrName=="nohref") {
             elt->href = attrValue;
             eltsInitialized++;
         }
@@ -81,6 +81,25 @@ void debugImage(cv::Mat img)
     cv::waitKey(0);
 }
 
+bool matIsEqual(const cv::Mat mat1, const cv::Mat mat2){
+    // treat two empty mat as identical as well
+    if (mat1.empty() && mat2.empty()) {
+        return true;
+    }
+    // if dimensionality of two mat is not identical, these two mat is not identical
+    if (mat1.cols != mat2.cols || mat1.rows != mat2.rows || mat1.dims != mat2.dims) {
+        return false;
+    }
+    
+    cv::Mat diff;    cv::Mat diff1color;
+    cv::compare(mat1, mat2, diff, cv::CMP_NE);
+    cv::cvtColor(diff, diff1color, CV_BGRA2GRAY, 1);
+
+    int nz = cv::countNonZero(diff1color);
+    return nz==0;
+}
+
+
 void processElement(AreaElement *elt)
 {
     if (elt->alt=="matchTemplate") {
@@ -103,21 +122,40 @@ void processElement(AreaElement *elt)
         /// Localizing the best match with minMaxLoc
         double minVal; double maxVal; cv::Point minLoc; cv::Point maxLoc; cv::Point matchLoc;
         minMaxLoc(result, &minVal, &maxVal, &minLoc, &maxLoc, cv::Mat());
-        matchLoc = minLoc;
-        rectangle(result,
+        matchLoc = maxLoc; // 0,1=> min, 2,3,4,5=>max
+        rectangle(imgRoi,
                   matchLoc,
                   cv::Point(matchLoc.x + templ.cols , matchLoc.y + templ.rows),
                   cv::Scalar::all(0), 2, 8, 0);
 
         int resultSize = *(result.size.p);
-        
-        //debugImage(result);
-        
-        if (resultSize>elt->value) {
-            std::cout << "\"" << elt->id  << "\",\"success\"" << std::endl;
+
+        if (resultSize > elt->value) {
+            std::cout << "\"" << elt->id  << "\",\"success\"," << resultSize << std::endl;
         } else {
-            std::cout << "\"" << elt->id  << ",\"fail\"" << std::endl;
+            std::cout << "\"" << elt->id  << ",\"fail\"," << resultSize << std::endl;
         }
+    }
+    
+    if (elt->alt=="diffPixels") {
+        cv::Mat templ = cv::imread(elt->href, 1);
+        int roiWidth = elt->coords[2] - elt->coords[0];
+        int roiHeight = elt->coords[3] - elt->coords[1];
+        int xRange = roiWidth - templ.cols;
+        int yRange = roiHeight - templ.rows;
+        cv::Mat imgRoi;
+        for (int x=0; x<xRange; x++) {
+            for (int y = 0; y<yRange; y++) {
+                imgRoi = imgMat(cv::Rect(elt->coords[0] + x, elt->coords[1] + y, templ.cols, templ.rows));
+                if (matIsEqual(templ, imgRoi)) {
+                    std::cout << "\"" << elt->id  << "\",\"success\"," << x << "," << y << std::endl;
+                    return;
+                }
+            }
+        }
+
+        std::cout << "\"" << elt->id  << ",\"fail\"" << std::endl;
+
     }
     
     if (elt->alt=="GetUTF8Text") {
@@ -167,11 +205,14 @@ int parseXml(std::string xmlFileName)
 {
     FILE *fp;
     char buff[BUFFER_SIZE];
-    fp = fopen(xmlFileName.c_str(), "r");
+    fp = fopen(xmlFileName.c_str(), "rb");
     if (fp == NULL) {
         std::cout << "Failed to open file: " << xmlFileName << std::endl;
         return 1;
     }
+    
+    // Skip 1st line where image tag is.
+    fgets(buff, BUFFER_SIZE, fp);
     
     XML_Parser parser = XML_ParserCreate(NULL);
     XML_SetElementHandler(parser, startElement, endElement);

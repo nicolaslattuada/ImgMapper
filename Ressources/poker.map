@@ -1,0 +1,33 @@
+<img src="Untitled" width="792" height="569" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:nicolas lattuada  -->
+<area shape="rect" coords="220,89,305,106" alt="GetUTF8Text" target="player1_name"  nohref="nohref" />
+<area shape="rect" coords="220,112,305,127" alt="GetUTF8Text" target="player1_balance"  nohref="nohref" />
+<area shape="rect" coords="270,142,308,173" alt="diffPixels" target="dealer" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/dealer.png" />
+<area shape="rect" coords="266,213,279,228" alt="GetUTF8Text" target="card1_value"  nohref="nohref" />
+<area shape="rect" coords="320,213,333,228" alt="GetUTF8Text" target="card2_value"  nohref="nohref" />
+<area shape="rect" coords="61,146,150,162" alt="GetUTF8Text" target="player2_name"  nohref="nohref" />
+<area shape="rect" coords="60,168,150,183" alt="GetUTF8Text" target="player2_balance"  nohref="nohref" />
+<area shape="rect" coords="374,213,387,228" alt="GetUTF8Text" target="card3_value"  nohref="nohref" />
+<area shape="rect" coords="428,213,441,228" alt="GetUTF8Text" target="card4_value"  nohref="nohref" />
+<area shape="rect" coords="482,213,495,228" alt="GetUTF8Text" target="card5_value"  nohref="nohref" />
+<area shape="rect" coords="488,89,575,106" alt="GetUTF8Text" target="player3_name"  nohref="nohref" />
+<area shape="rect" coords="488,111,575,127" alt="GetUTF8Text" target="player3_balance"  nohref="nohref" />
+<area shape="rect" coords="349,374,363,389" alt="GetUTF8Text" target="mycard1_value"  nohref="nohref" />
+<area shape="rect" coords="397,374,412,389" alt="GetUTF8Text" target="mycard2_value"  nohref="nohref" />
+<area shape="rect" coords="266,230,279,244" alt="diffPixels" target="card1_is_spade" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/spade.png" />
+<area shape="rect" coords="320,230,333,244" alt="diffPixels" target="card2_is_heart" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/heart.png" />
+<area shape="rect" coords="428,229,441,244" alt="diffPixels" target="card4_is_club" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/club.png" />
+<area shape="rect" coords="348,390,363,405" alt="diffPixels" target="mycard1_is_diamonds" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/diamonds.png" />
+<area shape="rect" coords="396,390,411,405" alt="diffPixels" target="mycard2_is_spade" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/spade.png" />
+<area shape="rect" coords="373,230,388,245" alt="diffPixels" target="card3_is_heart" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/heart.png" />
+<area shape="rect" coords="481,229,496,245" alt="diffPixels" target="card5_is_spade" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/spade.png" />
+<area shape="rect" coords="364,324,426,368" alt="diffPixels" target="im_am_dealer" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/dealer.png" />
+<area shape="rect" coords="212,310,289,365" alt="diffPixels" target="im_am_1_before_dealer" href="/Users/nicolaslattuada/Workspace/ImgMapper/Ressources/dealer.png" />
+<area shape="rect" coords="397,184,457,200" alt="GetUTF8Text" target="pot_value"  nohref="nohref" />
+</map>
