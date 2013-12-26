@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4D6BDC3F186B208B003C9A1D /* liblept.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6BDC3E186B208B003C9A1D /* liblept.dylib */; };
+		4D6BDC42186C3587003C9A1D /* ImageMapParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BDC40186C3587003C9A1D /* ImageMapParser.cpp */; };
+		4D6BDC45186C376B003C9A1D /* ImageMapParserCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BDC43186C376B003C9A1D /* ImageMapParserCallback.cpp */; };
+		4D6BDC48186C42F4003C9A1D /* OpenCvUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BDC46186C42F4003C9A1D /* OpenCvUtils.cpp */; };
+		4D6BDC4B186C71B8003C9A1D /* DataModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BDC49186C71B8003C9A1D /* DataModel.cpp */; };
 		4DBD5F6F1869BD1200198EEC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD5F6E1869BD1200198EEC /* main.cpp */; };
 		4DBD5F711869BD1200198EEC /* ImgMapper.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4DBD5F701869BD1200198EEC /* ImgMapper.1 */; };
 		4DBD5F7A1869C04800198EEC /* libexpat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBD5F791869C04800198EEC /* libexpat.dylib */; };
@@ -32,6 +36,14 @@
 
 /* Begin PBXFileReference section */
 		4D6BDC3E186B208B003C9A1D /* liblept.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liblept.dylib; path = ../../../../usr/local/Cellar/leptonica/1.69/lib/liblept.dylib; sourceTree = "<group>"; };
+		4D6BDC40186C3587003C9A1D /* ImageMapParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageMapParser.cpp; sourceTree = "<group>"; };
+		4D6BDC41186C3587003C9A1D /* ImageMapParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMapParser.h; sourceTree = "<group>"; };
+		4D6BDC43186C376B003C9A1D /* ImageMapParserCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageMapParserCallback.cpp; sourceTree = "<group>"; };
+		4D6BDC44186C376B003C9A1D /* ImageMapParserCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMapParserCallback.h; sourceTree = "<group>"; };
+		4D6BDC46186C42F4003C9A1D /* OpenCvUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenCvUtils.cpp; sourceTree = "<group>"; };
+		4D6BDC47186C42F4003C9A1D /* OpenCvUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCvUtils.h; sourceTree = "<group>"; };
+		4D6BDC49186C71B8003C9A1D /* DataModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataModel.cpp; sourceTree = "<group>"; };
+		4D6BDC4A186C71B8003C9A1D /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		4DBD5F6B1869BD1200198EEC /* ImgMapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ImgMapper; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBD5F6E1869BD1200198EEC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4DBD5F701869BD1200198EEC /* ImgMapper.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ImgMapper.1; sourceTree = "<group>"; };
@@ -86,6 +98,14 @@
 			children = (
 				4DBD5F6E1869BD1200198EEC /* main.cpp */,
 				4DBD5F701869BD1200198EEC /* ImgMapper.1 */,
+				4D6BDC40186C3587003C9A1D /* ImageMapParser.cpp */,
+				4D6BDC41186C3587003C9A1D /* ImageMapParser.h */,
+				4D6BDC43186C376B003C9A1D /* ImageMapParserCallback.cpp */,
+				4D6BDC44186C376B003C9A1D /* ImageMapParserCallback.h */,
+				4D6BDC46186C42F4003C9A1D /* OpenCvUtils.cpp */,
+				4D6BDC47186C42F4003C9A1D /* OpenCvUtils.h */,
+				4D6BDC49186C71B8003C9A1D /* DataModel.cpp */,
+				4D6BDC4A186C71B8003C9A1D /* DataModel.h */,
 			);
 			path = ImgMapper;
 			sourceTree = "<group>";
@@ -141,7 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6BDC48186C42F4003C9A1D /* OpenCvUtils.cpp in Sources */,
 				4DBD5F6F1869BD1200198EEC /* main.cpp in Sources */,
+				4D6BDC42186C3587003C9A1D /* ImageMapParser.cpp in Sources */,
+				4D6BDC45186C376B003C9A1D /* ImageMapParserCallback.cpp in Sources */,
+				4D6BDC4B186C71B8003C9A1D /* DataModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
