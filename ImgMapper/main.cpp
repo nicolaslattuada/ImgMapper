@@ -45,11 +45,9 @@ int main(int argc, char **argv)
 
     std::list<DataModel::AreaElementResult*> parsingResult = parserCallback->getResult();
     std::list<DataModel::AreaElementResult*>::iterator it;
-    DataModel::AreaElementResult *elementResult;
     it = parsingResult.begin();
     while (it != parsingResult.end()) {
-        elementResult = *it;
-        //std::cout << elementResult->id << ":" << elementResult->value << " " << elementResult->x << " " << elementResult->y << std::endl;
+        std::cout << (**it).id << ":" << (**it).value << " " << (**it).x << " " << (**it).y << std::endl;
         it++;
     }
     
