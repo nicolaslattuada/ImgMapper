@@ -1,5 +1,6 @@
 #include "ImageMapParser.h"
 #include "OpenCvUtils.h"
+#include "HandEvaluator.h"
 
 std::string imageFileName;
 cv::Mat imgMat;
@@ -50,6 +51,12 @@ int main(int argc, char **argv)
         std::cout << (**it).id << ":" << (**it).value << " " << (**it).x << " " << (**it).y << std::endl;
         it++;
     }
+    
+    std::string board = "AdAsKs";
+    std::string myCards = "QsJs";
+    HandEvaluator *handEvaluator = new HandEvaluator();
+    //StdDeck_CardMask cardMask = handEvaluator->textToPokerEval(board.c_str());
+    handEvaluator->evalHand(myCards.c_str(), board.c_str());
     
     return 0;
 }
